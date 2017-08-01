@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+class Encryption
+{
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+String a=scn.nextLine();
+int len=a.length();
+    int q=(int)Math.sqrt(len);
+    int w=q,n=q;
+    if(q*q<len)
+    n=n+1;
+     
+   String[] zz=new String[n];
+    
+    for(int i=0;i<len;i++)
+    {    if(zz[i%n]!=null)
+        zz[i%n]=zz[i%n]+a.substring(i,i+1);
+        else zz[i%n]=a.substring(i,i+1);
+    }
+    
+    
+for(int i=0;i<n;i++)
+{
+    System.out.print(zz[i]+" ");
+    
+    
+}
+
+    
+    
+    
+}
+}

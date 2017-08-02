@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+class Kaprekar
+{
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+long p=scn.nextLong();
+    long q=scn.nextLong();
+long square;
+    int digit,a,b,flag=0;
+    for(long w=p;w<=q;w++)
+{
+    square=w*w;
+        digit=0;
+        while(square>0)
+        {
+            digit++;
+            square/=10;
+            
+        }
+        
+        b=digit/2;
+        if(digit%2!=0)
+        b++;
+    square=w*w;
+        long magic=(long)Math.pow(10,b);
+        
+        long a1=square/magic;
+        long a2=(long)square%magic;
+        if(w==1 || (a1+a2==w && a2!=0))
+        {
+            System.out.print(w +" ");
+        flag=1;
+        }
+        
+        
+        
+    
+}
+    
+ if(flag==0)
+     System.out.println("INVALID RANGE");
+    
+}
+}

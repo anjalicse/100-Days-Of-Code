@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class Maxmin
+{
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+int t=scn.nextInt();
+for(int yy=0;yy<t;yy++)
+{
+    long n=scn.nextLong();
+    long sum=0L,sumsqr=0L;
+   for(long i=1;i<=n;i++)
+   {
+       sum=sum+i;
+       sumsqr+=i*i;
+       
+       
+   }
+    System.out.println(sum*sum-sumsqr);
+    
+    
+    
+}
+    
+    
+    
+}
+}

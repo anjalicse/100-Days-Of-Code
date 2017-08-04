@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+class Maxmin
+{
+    
+    public static int ispalindrome(int a)
+    {
+        int b=a;
+        int rev=0;
+        while(a>0)
+        {
+            rev=rev*10+(a%10);
+            a=a/10;
+            
+        }
+        if(rev==b)
+            return 1;
+        else return 0;
+        
+    }
+    
+    
+    
+    
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+int oo=scn.nextInt();
+for(int yy=0;yy<oo;yy++)
+{
+    int largest=0;
+    int n=scn.nextInt();
+     int a=999;
+    int b=999;
+    for(a=999;a>99;  b--)
+    {
+        
+        if(b<100)
+        {
+            a--;
+            b=999;
+            continue;
+            
+        }
+        
+        
+        if(a*b<n)
+        {
+        if(ispalindrome(a*b)==1)
+        {
+           if(largest<a*b)
+               largest=a*b;
+            
+        }
+            
+        }
+         
+        
+    }
+    System.out.println(largest);
+    
+    
+    
+}
+    
+    
+    
+}
+}

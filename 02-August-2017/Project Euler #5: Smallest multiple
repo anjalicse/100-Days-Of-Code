@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+class Maxmin
+{
+    public static long LCM(long a,long b )
+    {
+        long product=a*b;
+        long temp;
+        while(b>0)
+        {
+            temp=b;
+            b=a%b;
+            a=temp;
+            
+        }
+        return product/a;
+        
+        
+        
+    }
+        
+        
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+int tc=scn.nextInt();
+for(int ii=0;ii<tc;ii++)
+{
+    long n=scn.nextInt();
+    long lcm=1;
+    for(long i=2;i<=n;i++)
+    {
+        lcm=LCM(lcm,i);
+        
+    }
+    
+    System.out.println(lcm);
+    
+    
+}
+
+
+
+
+
+
+
+
+}}

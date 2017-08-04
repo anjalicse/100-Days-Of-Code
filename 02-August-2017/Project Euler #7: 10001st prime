@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+class Maxmin
+{
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+    long value=0;
+    int flag=0;
+int qq=scn.nextInt();
+    long prev=0,i,cnt=0;
+for(int tc=0;tc<qq;i++)
+{
+    long n=scn.nextLong();
+    if(tc!=0 && n>=prev)
+    {
+        i=value;
+        cnt=prev;
+    }
+        else 
+        {
+            i=2;
+            cnt=0;
+        }
+    
+    
+    for(; ;i++)
+    {
+        long sqr=(long)Math.sqrt(i);
+        flag=0;
+        for(long j=2;j<=sqr;j++)
+        {
+            if(i%j==0)
+            {
+                flag=1;
+                break;
+            }
+            
+        }
+        if(flag==0)
+        {
+            cnt++;
+        }
+        if(cnt==n)
+        { System.out.println(i);
+            value=i;
+         prev=n;
+         break;
+        }
+        
+    }
+    
+
+    
+    
+    
+    
+    
+}
+    
+    
+}
+}

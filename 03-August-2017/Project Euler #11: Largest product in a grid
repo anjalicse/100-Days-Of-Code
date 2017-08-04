@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+class Maxmin
+{
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+long largest=0,product=0;
+    long[][] a=new long[20][20];
+    
+    for(int i=0;i<20;i++)
+    {
+        for(int j=0;j<20;j++)
+      a[i][j]=scn.nextLong();
+        
+        
+    }
+    
+    largest=0;
+    
+    for(int i=0;i<20;i++)
+    {
+        for(int j=0;j<=16;j++)
+        {
+        product=a[i][j]*a[i][j+1]*a[i][j+2]*a[i][j+3];    
+            if(largest<product)
+                largest=product;
+            
+        }
+        
+    }
+    for(int i=0;i<=16;i++)
+    {
+        for(int j=0;j<20;j++)
+        {
+        product=a[i][j]*a[i+1][j]*a[i+2][j]*a[i+3][j];    
+            if(largest<product)
+                largest=product;
+            
+        }
+        
+    }
+   
+     for(int i=0;i<17;i++)
+    {
+        for(int j=0;j<=16;j++)
+        {
+        product=a[i][j]*a[i+1][j+1]*a[i+2][j+2]*a[i+3][j+3];    
+            if(largest<product)
+                largest=product;
+            
+        }
+        
+    }
+   
+     for(int i=0;i<17;i++)
+    {
+        for(int j=3;j<=19;j++)
+        {
+        product=a[i][j]*a[i+1][j-1]*a[i+2][j-2]*a[i+3][j-3];    
+            if(largest<product)
+                largest=product;
+            
+        }
+        
+    }
+   
+    System.out.println(largest);
+    
+    
+    
+    
+    
+    
+    
+}
+}

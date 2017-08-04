@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+class Maxmin
+{
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+int tc=scn.nextInt();
+
+    for(int ii=0;ii<tc;ii++)
+    {
+        long n=scn.nextLong();
+        long tri;
+        int cnt=0;
+        for(long i=1;;i++)
+        {  cnt=0;
+            tri=i*(i+1)/2;
+           
+            for(long j=1;j<=tri;j++)
+            {
+                if(tri%j==0)
+                    cnt++;
+                
+            }
+            if(cnt>n)
+            {
+                System.out.println(tri);
+                break;
+            }
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+}
+}

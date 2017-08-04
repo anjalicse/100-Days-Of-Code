@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+class Prime
+{
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+int oo=scn.nextInt();
+    int cnt,flag;
+    for(int qq=0;qq<oo;qq++)
+    {
+        long n=scn.nextLong();
+ 
+        for(long i=n;i>=2;i--)
+        {
+            long sqr=(long)Math.sqrt(i);
+            cnt=0;flag=0;
+            for(long j=2;j<=sqr;j++)
+            {
+                if(i%j==0)
+                {
+                    flag=1;
+                    break;
+                }
+                
+                
+            }
+            if(flag==0 && n%i==0)
+                {
+                System.out.println(i);
+            break;}
+            
+            
+            
+            
+            
+        }
+        
+        
+        
+    
+    }    
+}
+}

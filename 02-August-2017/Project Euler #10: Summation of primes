@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class Maxmin
+{
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+int tt=scn.nextInt();
+long sum=0;
+    int flag;
+    for(int zz=0;zz<tt;zz++)
+    { sum=0;
+        int n=scn.nextInt();
+    for(int i=2; i<=n  ;i++)    
+    {
+        int sqr=(int) Math.sqrt(i);
+        flag=0;
+        for(int j=2;j<=sqr;j++)
+        {
+            if(i%j==0)
+            {
+                flag=1;
+                break;
+                
+            }
+            
+            
+        }
+        if(flag==0)
+            sum+=i;
+        
+        
+        
+    }
+    
+        System.out.println(sum);
+
+    }
+    
+    
+}
+}

@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+class Maxmin
+{
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+int tc=scn.nextInt();
+int a,b,c,flag;
+    long largest=1, product=1;
+    for(int qq=0;qq<tc;qq++)
+{
+    int n=scn.nextInt();
+    if(n<6)
+    {
+        System.out.println(-1);
+    break;
+    }
+        flag=0;
+    for( a=1;a<=n/3;a++)
+    {
+        for(b=a+1;b<=n/3;b++)
+        {
+            c=n-a-b;
+            if(a<b && b<c)
+            {
+               if((a*a+b*b)==c*c) 
+               {    
+                   flag=1;
+                   product=a*b*c;
+                if(largest<product)
+                    largest=product;
+                
+            }}
+            
+            
+        }
+        
+        
+    }
+    if(flag==0)
+        System.out.println(-1);
+        else System.out.println(largest);
+    
+    
+    
+    
+}
+    
+    
+    
+}
+}

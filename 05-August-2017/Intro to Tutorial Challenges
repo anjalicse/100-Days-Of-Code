@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class Sort
+{
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+int v=scn.nextInt();
+int n=scn.nextInt();
+    int flag=0;
+    int idx=0;
+    int[] a=new int[n];
+for(int ii=0;ii<n;ii++)
+{ a[ii]=scn.nextInt();
+    if(flag==0 && a[ii]==v)
+    {
+        idx=ii;
+        flag=1;
+        System.out.println(idx);
+    }
+
+}
+   
+    
+    
+    
+}
+}
